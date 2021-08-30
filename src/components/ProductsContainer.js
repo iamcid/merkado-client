@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { fetchProducts } from '../actions/productsActions';
+import ProductsForm from './ProductsForm';
 
 class ProductsContainer extends React.Component {
 
@@ -13,6 +14,7 @@ class ProductsContainer extends React.Component {
         return (
             <div>
                 Products Container
+                <ProductsForm />
             </div>
         )
     }
