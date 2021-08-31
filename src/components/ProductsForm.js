@@ -29,7 +29,7 @@ class ProductsForm extends Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <div className="text-center"><h1>Create a Product:</h1></div>                
+                <div className="text-center"><h1>Add a Product:</h1></div>                
                 <br/>
                 <label className="name">Name:</label>
                 <input id="name" type='text' value={this.state.name} onChange={this.handleChange} name="name"/> 
