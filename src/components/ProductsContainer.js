@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { fetchProducts } from '../actions/productsActions';
-import ProductsForm from './ProductsForm';
+import ProductsList from './ProductsList';
 
 class ProductsContainer extends React.Component {
 
@@ -13,8 +13,8 @@ class ProductsContainer extends React.Component {
     render() {
         return (
             <div>
-                Products Container
-                <ProductsForm />
+                <h1>Products:</h1>
+                <ProductsList />
             </div>
         )
     }
