@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
 import { addProduct } from '../actions/productsActions'
 
-class ProductsForm extends Component {
+class ProductsForm extends React.Component {
 
     state = {
         name: '',
@@ -13,17 +13,22 @@ class ProductsForm extends Component {
         sell_or_trade:''
     }
 
-    handleChange = e => {
-        const { name, value } = e.target
-
+    handleChange = (e) => {
         this.setState({
-            [name]: value
+            [e.target.name]: [e.target.value]
         })
     }
 
     handleSubmit = e => {
         e.preventDefault()
         this.props.addProduct(this.state)
+        this.setState({
+            name: '',
+            category: '',
+            description: '',
+            image_url: '',
+            sell_or_trade: ''
+        })
     }
 
     render() {

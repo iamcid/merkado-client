@@ -1,5 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+
+import CommentsContainer from './CommentsContainer';
 
 const ProductsList = ({ products }) => {
     return (
@@ -11,6 +13,7 @@ const ProductsList = ({ products }) => {
                     </li>
                 </ul>
         )}
+        {/* <CommentsContainer productId={prod.id}/> */}
         </div>
     );
 };
