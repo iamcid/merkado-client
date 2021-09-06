@@ -6,6 +6,15 @@ export const fetchProducts = () => {
     }
 }
 
+export const selectedProduct = (product) => {
+    return (dispatch) => {
+        dispatch({
+            type: 'SELECTED_PRODUCT',
+            payload: product
+        })        
+    }
+}
+
 export const addProduct = product => {
     return (dispatch) => {
         fetch('http://localhost:3000/products', {

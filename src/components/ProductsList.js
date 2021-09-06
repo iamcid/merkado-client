@@ -1,19 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { selectedProduct } from '../actions/productsActions';
+import { Link } from 'react-router-dom';
 
-import CommentsContainer from './CommentsContainer';
 
-const ProductsList = ({ products }) => {
+const ProductsList = ( props ) => {
+    const listProducts = props.products.map((product) => {
+        return (
+        <div key={product.id} className="productList">
+            <Link to={`/products/${product.id}`}>{product.name}</Link>        
+        </div>)
+    })
+
     return (
         <div>
-            {products.map(product => 
-                <ul key={product.id}>
-                    <li >
-                        {product.name} - {product.category} - {product.description} - {product.image_url} - {product.sell_or_trade}
-                    </li>
-                </ul>
-        )}
-        {/* <CommentsContainer productId={prod.id}/> */}
+          <ul>{listProducts}</ul>
         </div>
     );
 };
@@ -22,4 +23,8 @@ const mapStateToProps = state => {
     return { products: state.products }
 }
 
-export default connect(mapStateToProps)(ProductsList);
+const mapDispatchToProps = {
+    selectedProduct: selectedProduct
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductsList);
