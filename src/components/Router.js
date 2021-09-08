@@ -15,7 +15,6 @@ class Router extends React.Component {
                 <Route exact path="/products" component={ProductsContainer} />
                 <Route exact path="/products/new" component={ProductsForm} />
                 <Route exact path="/products/:id" component={ProductsShow} />
-                />
             </Switch>
         );
     }
