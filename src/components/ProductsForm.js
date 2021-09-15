@@ -36,20 +36,15 @@ class ProductsForm extends React.Component {
             <form onSubmit={this.handleSubmit}>
                 <div className="text-center"><h1>Add a Product:</h1></div>                
                 <br/>
-                <label className="name">Name:</label>
-                <input id="name" type='text' value={this.state.name} onChange={this.handleChange} name="name"/> 
+                <input id='name' type='text' placeholder='Name' value={this.state.name} onChange={this.handleChange} name="name"/> 
                 <br/>
-                <label>Category:</label>
-                <input type='text' value={this.state.category} onChange={this.handleChange} name="category"/> 
+                <input id='category' type='text' placeholder='Category' value={this.state.category} onChange={this.handleChange} name="category"/> 
                 <br/>
-                <label>Description:</label>
-                <input type='text' value={this.state.description} onChange={this.handleChange} name="description"/> 
+                <input id='description' type='text'  placeholder='Description' value={this.state.description} onChange={this.handleChange} name="description"/> 
                 <br/>
-                <label>Image URL:</label>
-                <input type='text' value={this.state.image_url} onChange={this.handleChange} name="image_url"/> 
+                <input id='image_url' type='text' placeholder='Image URL' value={this.state.image_url} onChange={this.handleChange} name="image_url"/> 
                 <br/>
-                <label>Sell Or Trade:</label>
-                <input type='text' value={this.state.sell_or_trade} onChange={this.handleChange} name="sell_or_trade"/> 
+                <input id='sell_or_trade' type='text' placeholder='Sell or Trade' value={this.state.sell_or_trade} onChange={this.handleChange} name="sell_or_trade"/> 
                 <br/><br/>
                 <button style={{backgroundColor: 'black', color: 'white'}} >Create Product</button>
 
