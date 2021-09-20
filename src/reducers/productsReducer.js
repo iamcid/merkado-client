@@ -8,12 +8,3 @@ export const productsReducer = (state = [], action) => {
             return state
     }
 }
-
-export const selectedProductReducer = (state = null, action) => {
-    switch(action.type){
-        case 'SELECTED_PRODUCT':
-            return action.payload
-        default:
-            return state
-    }
-}

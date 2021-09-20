@@ -6,6 +6,7 @@ const NavBar = () => {
         <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <div class="container">
           <a class="navbar-brand" href="/">Home</a>
+          <a class="navbar-brand" href="/about">About</a>
           <a class="navbar-brand" href="/products">Products</a>          
           <a class="navbar-brand" href="/products/new">Add a Product</a>         
         </div>
