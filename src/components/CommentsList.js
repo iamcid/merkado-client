@@ -17,7 +17,7 @@ const CommentsList = ({ comments, productId }) => {
                  {comments.filter(function(comment){
                      return comment.product_id === productId}).map(c => 
                 <div key={c.id}>
-                    {c.content} 
+                    - {c.content} 
                 </div>)}
             </div>
         )

@@ -12,12 +12,6 @@ class ProductsForm extends React.Component {
         sell_or_trade:''
     }
 
-    // handleChange = (e) => {
-    //     this.setState({
-    //         [e.target.name]: [e.target.value]
-    //     })
-    // }
-
     handleChange = e => {
         const { name, value } = e.target
         this.setState({
