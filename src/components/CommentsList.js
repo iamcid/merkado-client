@@ -1,18 +1,30 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
+import { fetchComments } from "../actions/commentsActions";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
 
 const CommentsList = ({ comments, productId }) => {
-    const comment = comments.filter(comment => comment.product_id === productId)
-    return (
-        <div>
-            {comment.map(comment => <ul><li key ={comment.id}>{comment.content}</li></ul>)}           
-        </div>
-    );
-};
+    
+        const dispatch = useDispatch()
+
+        useEffect(() => {
+            dispatch(fetchComments())
+        }, [dispatch])
+
+        return (
+            <div>
+                 {comments.filter(function(comment){
+                     return comment.product_id === productId}).map(c => 
+                <div key={c.id}>
+                    {c.content} 
+                </div>)}
+            </div>
+        )
+    }
 
 const mapStateToProps = state => {
-    return { comments: state.comments }
+    return { comments: state.comments}
 }
 
-export default connect(mapStateToProps)(CommentsList);
+export default connect(mapStateToProps, { fetchComments })(CommentsList);

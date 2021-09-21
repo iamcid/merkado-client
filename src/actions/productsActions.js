@@ -6,15 +6,6 @@ export const fetchProducts = () => {
     }
 }
 
-export const selectedProduct = (product) => {
-    return (dispatch) => {
-        dispatch({
-            type: 'SELECTED_PRODUCT',
-            payload: product
-        })        
-    }
-}
-
 export const addProduct = product => {
     return (dispatch) => {
         fetch('http://localhost:3000/products', {
@@ -22,7 +13,9 @@ export const addProduct = product => {
             body: JSON.stringify(product),
             headers: {'Content-Type': 'application/json'}
         })
-        .then(resp => resp.json())
+        .then(response => response.json())
         .then(product => dispatch({ type: 'ADD_PRODUCT', payload: product}))
     }
 }
+
+
