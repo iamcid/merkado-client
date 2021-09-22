@@ -2,6 +2,7 @@
 Merkado is an online marketplace that allows you to sell or trade any of your products.
 
 [Backend](https://github.com/iamcid/merkado-api)
+[Demo](https://youtu.be/uo3FWS-7kMo)
 
 
 # Getting Started with Create React App
