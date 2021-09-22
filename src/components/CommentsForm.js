@@ -18,6 +18,9 @@ class CommentsForm extends React.Component {
     handleSubmit = e => {
         e.preventDefault()
         this.props.addComment(this.state, this.props.productId)
+        this.setState({
+            content:''
+        })
     }
 
     render() {
