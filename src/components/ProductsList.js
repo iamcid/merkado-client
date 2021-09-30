@@ -1,28 +1,8 @@
-// import React from 'react'
-// import { connect } from 'react-redux'
-// import { Link } from 'react-router-dom'
-
-
-// const ProductsList = ({products}) => {
-//     return (
-//         <div>
-//             {products.map( product => 
-//                 <li key={product.id}>
-//                     <Link to={`/products/${product.id}`}>{product.name}</Link>
-//                 </li> )}
-//         </div>
-//     )
-// }
-
-// const mapStateToProps = state => {
-//     return { products: state.products }
-// }
-// export default connect(mapStateToProps)(ProductsList);
-
 import React from 'react';
 import { connect } from 'react-redux';
 import CommentsForm from './CommentsForm';
 import CommentsList from './CommentsList';
+import LikeButton from './LikeButton';
 
 const ProductsList = ({ products }) => {
         return (
@@ -38,6 +18,8 @@ const ProductsList = ({ products }) => {
                         <u><b>Sell or Trade:</b></u> {product.sell_or_trade}<br/>
                         <CommentsForm productId={product.id} />
                         <CommentsList productId={product.id} />
+                        <br/>
+                       <LikeButton />
                         </blockquote>
                     </div>
                 </ul>)}
